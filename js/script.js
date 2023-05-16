@@ -6,29 +6,29 @@ const labelDay = document.getElementById('labelDay')
 const labelMonth = document.getElementById('labelMonth')
 const labelYear = document.getElementById('labelYear')
 
-const errorMessageDay = document.getElementById('errorMessageDay')
-const errorMessageMonth = document.getElementById('errorMessageMonth')
-const errorMessageYear = document.getElementById('errorMessageYear')
+const errorMessageDayEmpty = document.getElementById('errorMessageDayEmpty')
+const errorMessageMonthEmpty = document.getElementById('errorMessageMonthEmpty')
+const errorMessageYearEmpty = document.getElementById('errorMessageYearEmpty')
 
 const btnCalc = document.getElementById('btnCalc')
 
 btnCalc.onclick = () => {
   if(inputDay.value == '') {    
-    showErrorEmpty(errorMessageDay, inputDay, labelDay)      
+    showErrorEmpty(errorMessageDayEmpty, inputDay, labelDay)      
   } else {
-    hideErrorEmpty(errorMessageDay, inputDay, labelDay)    
+    hideErrorEmpty(errorMessageDayEmpty, inputDay, labelDay)    
   }
 
   if(inputMonth.value == '') {    
-    showErrorEmpty(errorMessageMonth, inputMonth, labelMonth)      
+    showErrorEmpty(errorMessageMonthEmpty, inputMonth, labelMonth)      
   } else {
-    hideErrorEmpty(errorMessageMonth, inputMonth, labelMonth)    
+    hideErrorEmpty(errorMessageMonthEmpty, inputMonth, labelMonth)    
   }
 
   if(inputYear.value == '') {    
-    showErrorEmpty(errorMessageYear, inputYear, labelYear)      
+    showErrorEmpty(errorMessageYearEmpty, inputYear, labelYear)      
   } else {
-    hideErrorEmpty(errorMessageYear, inputYear, labelYear)    
+    hideErrorEmpty(errorMessageYearEmpty, inputYear, labelYear)    
   }
 }
 
