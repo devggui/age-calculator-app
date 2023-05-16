@@ -11,20 +11,41 @@
 
   <title>Frontend Mentor | Age calculator app</title> 
 </head>
-<body>
+<body class="bg-[var(--Off-white)] w-screen h-screen flex items-center justify-center">
+  <main class="bg-[var(--White)] flex flex-col items-center justify-center p-5 sm:p-8 m-5 min-w-[330px] max-w-lg w-full rounded-t-3xl rounded-bl-3xl rounded-br-[4rem]">
+    <div class="flex flex-row w-full justify-between sm:justify-start">
+      <div class="flex flex-col sm:mr-5 relative">
+        <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Day" id="labelDay">Day</label>
+        <input class="w-20 sm:w-24 h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Day" id="inputDay" maxlength="2" placeholder="DD">
+        <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageDay">This field is required</span>
+      </div>
+    
+      <div class="flex flex-col sm:mr-5 relative">
+        <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Month" id="labelMonth">Month</label>
+        <input class="w-20 sm:w-24 h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Month" id="inputMonth" maxlength="2" placeholder="MM">
+        <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageMonth">This field is required</span>
+      </div>
+    
+      <div class="flex flex-col sm:mr-5 relative">
+        <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Year" id="labelYear">Year</label>
+        <input class="w-20 sm:w-24 h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Year" id="inputYear" maxlength="4" placeholder="YYYY">
+        <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageYear">This field is required</span>
+      </div>
+    </div>
+    
+    <!-- Separator -->
+    <div class="bg-[var(--Light-grey)] w-full h-[1px] my-14 sm:my-8 flex items-center justify-center sm:justify-end">
+      <button class="p-4 bg-[var(--Purple)] rounded-full hover:bg-[var(--Off-black)]" id="btnCalc">
+        <img class="w-6 h-6" src="./assets/images/icon-arrow.svg" alt="Icone de seta">
+      </button>
+    </div>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+    <div class="flex flex-col items-start justify-center text-left w-full">
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">years</strong></h1>
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">months</strong></h1>
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">days</strong></h1>
+    </div>    
+  </main>
+  <script src="./js/script.js"></script>
 </body>
 </html>
