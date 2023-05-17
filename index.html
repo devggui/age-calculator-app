@@ -8,31 +8,34 @@
   <link rel="stylesheet" href="./styles/main.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <title>Frontend Mentor | Age calculator app</title> 
 </head>
 <body class="bg-[var(--Off-white)] w-screen h-screen flex items-center justify-center">
-  <main class="bg-[var(--White)] flex flex-col items-center justify-center p-5 sm:p-8 m-5 min-w-[330px] max-w-lg w-full rounded-t-3xl rounded-bl-3xl rounded-br-[4rem]">
+  <main class="bg-[var(--White)] flex flex-col items-center justify-center p-5 sm:p-8 m-5 min-w-[330px] max-w-lg w-full rounded-t-3xl rounded-bl-3xl rounded-br-[9rem]">
     <div class="flex flex-row w-full justify-between sm:justify-start">
       <div class="flex flex-col sm:mr-5 relative">
         <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Day" id="labelDay">Day</label>
-        <input class="w-20 sm:w-[6.3rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Day" id="inputDay" maxlength="2" placeholder="DD">
+        <input class="w-20 sm:w-[6.6rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] outline-0 focus:border-[var(--Purple)] rounded-md font-bold" type="text" name="Day" id="inputDay" maxlength="2" placeholder="DD">
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageDayEmpty">This field is required</span>
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageDayValid">Must be a valid day</span>
+        <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageDateValid">Must be a valid date</span>
       </div>
     
       <div class="flex flex-col sm:mr-5 relative">
         <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Month" id="labelMonth">Month</label>
-        <input class="w-20 sm:w-[6.3rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Month" id="inputMonth" maxlength="2" placeholder="MM">
+        <input class="w-20 sm:w-[6.6rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] outline-0 focus:border-[var(--Purple)] rounded-md font-bold" type="text" name="Month" id="inputMonth" maxlength="2" placeholder="MM">
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageMonthEmpty">This field is required</span>
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageMonthValid">Must be a valid month</span>
       </div>
     
       <div class="flex flex-col sm:mr-5 relative">
         <label class="uppercase tracking-widest text-xs font-bold text-[var(--Smokey-grey)] mb-1" for="Year" id="labelYear">Year</label>
-        <input class="w-20 sm:w-[6.3rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] rounded-md font-bold" type="text" name="Year" id="inputYear" maxlength="4" placeholder="YYYY">
+        <input class="w-20 sm:w-[6.6rem] h-11 pl-2 pr-4 border border-solid border-[var(--Light-grey)] outline-0 focus:border-[var(--Purple)] rounded-md font-bold" type="text" name="Year" id="inputYear" maxlength="4" placeholder="YYYY">
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageYearEmpty">This field is required</span>
         <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageYearValid">Must be in the past</span>
+        <span class="hidden absolute -bottom-4 text-xxs text-[var(--Light-red)]" id="errorMessageYearFourNumber">Minimum four numbers</span>
       </div>
     </div>
     
@@ -44,9 +47,9 @@
     </div>
 
     <div class="flex flex-col items-start justify-center text-left w-full">
-      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">years</strong></h1>
-      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">months</strong></h1>
-      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl">-- <strong class="text-[var(--Off-black)] italic">days</strong></h1>
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl"><span id="resultYear">--</span> <strong class="text-[var(--Off-black)] italic">years</strong></h1>
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl"><span id="resultMonth">--</span> <strong class="text-[var(--Off-black)] italic">months</strong></h1>
+      <h1 class="text-[var(--Purple)] font-extrabold text-6xl sm:text-7xl"><span id="resultDay">--</span> <strong class="text-[var(--Off-black)] italic">days</strong></h1>
     </div>    
   </main>
   <script src="./js/script.js"></script>
